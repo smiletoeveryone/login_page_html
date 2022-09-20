@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img src="maruko.jpg" alt="lion_tech" style="width:50px;height:50px;">
+<h1 style="color:blue;font-size:18px;"> this is a login/registration page.</h1>
+<p style="color:red;font-size:18px;">This is a demo page !</p>
+
+
+</body>
+</html>
+
+<!-- Basic HTML Form -->
+<form action="/send-data-here" method="post">
+    <label for="first">First name:</label>
+    <input type="text" id="first" name="first" size="7"/>
+    <label for="last">Last name:</label>
+    <input type="text" id="last" name="last" size="7" />
+    <button type="submit">Submit</button>
+  </form>
+
+  <p></p>
+
+
+  <!-- HTML From with Builtpin Validation -->
+  <!-- when a user tries to submit an empty field for Name, 
+    it gives an error that pops right in the form field.-->
+  <form action="/send-data-here" mothod="post">
+    <label for="roll"> Phone Number: </label>
+    <input 
+    type="text"
+    id="roll"
+    name="roll"
+    required
+    minlength="10"
+    maxlength="20"
+    size="9"
+    />
+    <label for="name"> E-mail: </label>
+    <input type="text" id="name" name="name" required size="20" />
+    <button type="submit">Submit</button>
+  </form>
+
+  <p></p>
+
+
+  <!-- HTML Form with Custom Validation -->
+  <!--JavaScript offers an additional level of validation 
+    along with HTML native form attributes on the client side.-->
+  <form action="/action_page.php">
+    <label for="pswrd">Password:</label>
+    <input
+      type="password"
+      id="pswrd"
+      name="pswrd"
+      pattern="[a-z0-9]{1,15}"
+      title="Password should be digits (0 to 9) or alphabets (a to z)."
+      size="7"
+    />
+  
+    <button type="submit">Submit</button>
+  </form>
